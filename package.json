@@ -1,0 +1,18 @@
+{
+  "name": "qianlang-beauty",
+  "version": "1.0.0",
+  "description": "前浪贸易有限公司美容仪官网",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "vite": "^6.5.0"
+  }
+}

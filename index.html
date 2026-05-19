@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前浪貿易有限公司 - 美容儀器專家</title>
+  <meta name="description" content="前浪貿易有限公司專注於引進國際頂級美容儀器，提供LED光療美容儀、紅光面罩、潤眼儀等高品質護膚產品。">
+  <link rel="stylesheet" href="src/index.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+  <!-- 导航栏 -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            前浪貿易
+          </span>
+        </div>
+
+        <!-- 桌面端导航 -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-accent transition-colors" data-translate="nav-home">
+            首頁
+          </a>
+          <a href="#products" class="text-gray-700 dark:text-gray-300 hover:text-accent transition-colors" data-translate="nav-products">
+            產品
+          </a>
+          <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-accent transition-colors" data-translate="nav-about">
+            關於我們
+          </a>
+          <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-accent transition-colors" data-translate="nav-contact">
+            聯絡我們
+          </a>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="flex items-center space-x-3">
+          <!-- 语言切换 -->
+          <button 
+            onclick="switchLang('zh')" 
+            class="px-3 py-1 text-sm font-medium rounded-full transition-colors bg-primary text-white"
+            id="lang-zh"
+          >
+            繁
+          </button>
+          <button 
+            onclick="switchLang('en')" 
+            class="px-3 py-1 text-sm font-medium rounded-full transition-colors bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+            id="lang-en"
+          >
+            EN
+          </button>
+          <!-- 主题切换 -->
+          <button 
+            onclick="toggleTheme()" 
+            class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+            id="theme-icon"
+          >
+            🌙
+          </button>
+          <!-- 移动端菜单按钮 -->
+          <button 
+            onclick="toggleMobileMenu()" 
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 移动端菜单 -->
+    <div class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700" id="mobile-menu">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#home" class="block py-2 text-gray-700 dark:text-gray-300" data-translate="nav-home">首頁</a>
+        <a href="#products" class="block py-2 text-gray-700 dark:text-gray-300" data-translate="nav-products">產品</a>
+        <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300" data-translate="nav-about">關於我們</a>
+        <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300" data-translate="nav-contact">聯絡我們</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero区域 -->
+  <section id="home" class="pt-24 pb-16 bg-gradient-to-br from-primary-light via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- 文字内容 -->
+        <div class="flex-1 text-center lg:text-left">
+          <h1 id="hero-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6 slide-in">
+            先進美容科技，煥發自然光彩
+          </h1>
+          <p id="hero-subtitle" class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0">
+            探索我們的LED光療美容儀系列，享受專業護膚體驗
+          </p>
+          <a 
+            href="#products" 
+            id="hero-button" 
+            class="inline-block bg-gradient-to-r from-primary to-accent text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            立即瀏覽
+          </a>
+        </div>
+        <!-- 产品展示图 -->
+        <div class="flex-1 relative">
+          <div class="w-full max-w-md mx-auto">
+            <div class="relative">
+              <img 
+                src="images/FDA510K面颈一体LED红光面罩美容仪大排灯光疗嫩肤光子美颈仪.jpg" 
+                alt="美容儀展示" 
+                class="w-full h-auto rounded-2xl shadow-2xl"
+              />
+              <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                <div class="text-2xl font-bold text-accent">FDA</div>
+                <div class="text-sm text-gray-600 dark:text-gray-400">認證品質</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 产品展示 -->
+  <section id="products" class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row justify-between items-center mb-12">
+        <h2 id="products-title" class="text-3xl font-bold text-gray-800 dark:text-white mb-4 sm:mb-0">
+          熱門產品
+        </h2>
+        <a href="#products" id="products-view-all" class="text-accent hover:text-primary-dark font-medium flex items-center gap-2">
+          查看全部
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- 产品网格 -->
+      <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 产品卡片由JS动态生成 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section id="about" class="py-16 bg-gradient-to-br from-gray-50 to-primary-light dark:from-gray-800 dark:to-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="about-title" class="text-3xl font-bold text-gray-800 dark:text-white text-center mb-12">
+        關於前浪
+      </h2>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- 公司介绍 -->
+        <div>
+          <p id="about-content" class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
+            前浪貿易有限公司專注於引進國際頂級美容儀器，為客戶提供高品質、安全有效的美容護膚解決方案。我們堅持創新與品質並重，致力於將先進的美容科技帶入每個家庭。
+          </p>
+          
+          <!-- 使命愿景 -->
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 id="about-mission" class="text-lg font-bold text-gray-800 dark:text-white mb-3">
+                使命
+              </h3>
+              <p id="about-mission-content" class="text-gray-600 dark:text-gray-400">
+                提供安全、高效、創新的美容護膚產品
+              </p>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+              <h3 id="about-vision" class="text-lg font-bold text-gray-800 dark:text-white mb-3">
+                願景
+              </h3>
+              <p id="about-vision-content" class="text-gray-600 dark:text-gray-400">
+                成為亞太地區領先的美容儀器供應商
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 产品展示 -->
+        <div class="relative">
+          <div class="grid grid-cols-2 gap-4">
+            <img 
+              src="images/7色LED光子面罩美容儀家用脸部肤色软硅胶俄语红光面膜仪.jpg" 
+              alt="美容儀器" 
+              class="w-full h-48 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <img 
+              src="images/LED大排灯美容仪红外美容灯家用光子嫩肤红光支架理疗伸缩灯抗衰.jpg" 
+              alt="大排燈" 
+              class="w-full h-48 object-cover rounded-xl mt-8"
+              loading="lazy"
+            />
+            <img 
+              src="images/充电款雾化润眼仪眼部雾化补水缓解干涩疲劳护眼洗护养护三合一.jpg" 
+              alt="潤眼儀" 
+              class="w-full h-48 object-cover rounded-xl"
+              loading="lazy"
+            />
+            <img 
+              src="images/无线磁吸红光面罩FDA510K红蓝光LED大排灯面部嫩肤电子红外美容仪.jpg" 
+              alt="紅光面罩" 
+              class="w-full h-48 object-cover rounded-xl"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-accent text-white p-4 rounded-xl shadow-lg">
+            <div class="text-3xl font-bold">10+</div>
+            <div class="text-sm">年行業經驗</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="contact-title" class="text-3xl font-bold text-gray-800 dark:text-white text-center mb-12">
+        聯絡我們
+      </h2>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- 联系表单 -->
+        <div>
+          <form id="contact-form" class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+            <div class="mb-6">
+              <label id="contact-name" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                姓名
+              </label>
+              <input 
+                type="text" 
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label id="contact-email" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                電子郵件
+              </label>
+              <input 
+                type="email" 
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label id="contact-phone" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                電話
+              </label>
+              <input 
+                type="tel" 
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div class="mb-6">
+              <label id="contact-message" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                留言
+              </label>
+              <textarea 
+                rows="4" 
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                required
+              ></textarea>
+            </div>
+            <button 
+              type="submit" 
+              id="contact-submit" 
+              class="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+            >
+              提交
+            </button>
+          </form>
+        </div>
+        
+        <!-- 联系信息 -->
+        <div class="space-y-8">
+          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">公司信息</h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary-light dark:bg-gray-700 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-gray-800 dark:text-white font-medium">前浪貿易有限公司</div>
+                  <div id="footer-address" class="text-gray-600 dark:text-gray-400 text-sm">香港</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary-light dark:bg-gray-700 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-gray-800 dark:text-white font-medium">電子郵件</div>
+                  <div class="text-gray-600 dark:text-gray-400 text-sm">qianlang0001@outlook.com</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary-light dark:bg-gray-700 rounded-full flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-gray-800 dark:text-white font-medium">聯絡人</div>
+                  <div class="text-gray-600 dark:text-gray-400 text-sm">易先生 | +852 9042 8586</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- 公司信息 -->
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
+            前浪貿易
+          </h3>
+          <p class="text-gray-400 mb-4">
+            專注於引進國際頂級美容儀器，為客戶提供高品質、安全有效的美容護膚解決方案。
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"></path>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- 快速链接 -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">快速鏈接</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors" data-translate="nav-home">首頁</a></li>
+            <li><a href="#products" class="text-gray-400 hover:text-white transition-colors" data-translate="nav-products">產品</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" data-translate="nav-about">關於我們</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-translate="nav-contact">聯絡我們</a></li>
+          </ul>
+        </div>
+        
+        <!-- 联系方式 -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">聯絡方式</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>qianlang0001@outlook.com</li>
+            <li>+852 9042 8586</li>
+            <li>香港</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <p id="footer-copyright" class="text-gray-400 text-sm">
+          版權所有 © 2024 前浪貿易有限公司
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button 
+    id="back-to-top" 
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    class="fixed bottom-6 right-6 w-12 h-12 bg-accent text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-pink-700"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="src/main.js"></script>
+  <script>
+    // 返回顶部按钮显示/隐藏
+    window.addEventListener('scroll', () => {
+      const backToTop = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'invisible');
+      } else {
+        backToTop.classList.add('opacity-0', 'invisible');
+      }
+    });
+  </script>
+</body>
+</html>
